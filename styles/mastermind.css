@@ -1,0 +1,252 @@
+:root {
+    --holtwood: "Holtwood One SC", serif;
+    --lexend: "Lexend", serif;
+
+    --sidebar-header-size: 6rem;
+
+    --dark-blue: #1D313C;
+    --dark-blue-highlight: #304d5a;
+    --light-dark-blue: #103747;
+    --middle-blue: #419099;
+    --light-blue: #91cbcf;
+    --deep-blue: #272c44;
+    --deep-blue-highlight: #444f89;
+    --light-deep-blue: #5970b7;
+
+    --yellow: #d5a021;
+    --yellow-highlight: #E2B547;
+    --yellow-middle: #e1b42e;
+}
+
+
+.game-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    gap: 2rem;
+    padding: 2rem;
+
+    background-color: var(--dark-blue);
+    border: 3px solid var(--light-blue);
+    border-radius: 10px;
+
+    color: white;
+    font-family: var(--lexend);
+    user-select: none;
+
+    .play-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 64px;
+        width: 64px;
+
+        border: 3px solid black;
+        border-radius: 10px;
+
+        background-color: var(--yellow);
+
+        &:hover {
+            background-color: var(--yellow-highlight);
+        }
+    }
+
+    .rules-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0.2rem;
+
+        background-color: var(--dark-blue);
+        border: none;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: var(--dark-blue-highlight);
+        }
+
+        img {
+            height: 64px;
+            width: 64px;
+        }
+    }
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .main-display {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        width: 100%;
+        margin-bottom: 5rem;
+        gap: 2rem;
+        padding: 2rem 0px;
+
+        background: var(--dark-blue-highlight);
+
+        .main-container-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .try-bubbles-div {
+            flex-direction: column;
+            width: fit-content;
+            height: fit-content;
+            padding: 1.5rem;
+        }
+    }
+}
+
+.example-bubbles-div {
+    position: fixed;
+    bottom: 0;
+
+    width: fit-content;
+    height: fit-content;
+    padding: 1.5rem;
+}
+
+.try-bubbles-div,
+.example-bubbles-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1.5rem;
+    gap: 1.5rem;
+
+    background-color: var(--dark-blue);
+    border: 3px solid var(--light-blue);
+    border-radius: 10px;
+
+    .bubbles-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .hints-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+
+    #colored-bubble,
+    .try-bubble {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+    }
+
+    .try-bubble {
+        background-color: rgb(184, 184, 184);
+    }
+
+    .red {
+        background-color: red;
+        cursor: pointer;
+    }
+
+    .green {
+        background-color: green;
+        cursor: pointer;
+    }
+
+    .blue {
+        background-color: blue;
+        cursor: pointer;
+    }
+
+    .yellow {
+        background-color: yellow;
+        cursor: pointer;
+    }
+}
+
+.winning-message-p {
+    display: flex;
+    font-size: 4rem;
+    color: whitesmoke
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+
+    .rules-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 90%;
+        max-width: 500px;
+        padding: 20px;
+        gap: 1rem;
+
+        background-color: var(--dark-blue-highlight);
+        border: 2px solid var(--light-blue);
+        border-radius: 8px;
+
+        color: white;
+        font-family: var(--lexend);
+        font-size: 1.15rem;
+        line-height: 1.5rem;
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-family: var(--holtwood);
+        }
+
+        .important-rule {
+            width: 100%;
+            font-weight: bold;
+        }
+    }
+
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        background: none;
+        border: none;
+
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .close-button:hover {
+        color: var(--yellow);
+    }
+}

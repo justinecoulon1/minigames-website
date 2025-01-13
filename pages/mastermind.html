@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastermind</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/mastermind.css">
+
+    <script src="../js/mastermind/mastermind.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="side-bar">
+
+        <div class="side-bar-tab">
+            <div class="logo-container"> <a href="./index.html"> <img class="logo-img" src="../images/main/logo.png"
+                        alt="logo"></a>
+            </div>
+        </div>
+
+        <div class="side-bar-tab">
+            <div class="img-container">
+                <a href="./memory.html"><img class="memory-logo-img" src="../images/memory/tab-logo.png" alt="logo"></a>
+            </div>
+        </div>
+
+        <div class="side-bar-tab current-tab">
+            <div class="img-container">
+                <a href=""><img class="mastermind-logo-img" src="../images/mastermind/tab-logo.png" alt="logo"></a>
+            </div>
+        </div>
+
+        <div class="side-bar-tab">
+            <div class="img-container">
+                <a href="./pendu.html"> <img class="pendu-logo-img" src="../images/pendu/tab-logo.png" alt="logo"></a>
+            </div>
+        </div>
+
+    </section>
+
+    <header>
+        <div class="header-container">
+            <img class="header-img" src="../images/mastermind/tab-logo.png" alt="logo-mastermind">
+            <h1>
+                MASTERMIND
+            </h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="game-header">
+            <button class="play-button"><img draggable="false" src="../images/main/start.png" alt="play"></button>
+            <button class="rules-button"><img draggable="false" src="../images/main/rules.png" alt="rules"></button>
+        </div>
+
+        <div class="lightbox" id="rulesLightbox">
+            <div class="rules-card" onclick="event.stopPropagation()">
+                <button class="close-button">&times;</button>
+                <h2>Game Rules</h2>
+                <p>Mastermind is a code-breaking game where the goal is to guess a secret code.</p>
+                <p>The code consists of a sequence of colors or symbols arranged in a specific order.</p>
+                <p>After each guess, you receive feedback indicating how many colors or symbols are correct and in the
+                    correct position, and how many are correct but in the wrong position.</p>
+                <p>Use this feedback to refine your guesses and crack the code before you run out of attempts.</p>
+                <div class="important-rule">
+                    <p>The order of the hints are not linked to the order of the colors!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-display">
+            <div class="initial-try-container-div"></div>
+            <div class="main-container-div"></div>
+        </div>
+        <div class="example-bubbles-div">
+            <div class="red" id="colored-bubble"></div>
+            <div class="blue" id="colored-bubble"></div>
+            <div class="green" id="colored-bubble"></div>
+            <div class="yellow" id="colored-bubble"></div>
+        </div>
+    </main>
+</body>
+
+</html>

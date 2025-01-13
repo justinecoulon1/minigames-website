@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hangman</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/pendu.css">
+
+    <script src="../js/pendu/pendu-words.js" defer></script>
+    <script src="../js/pendu/pendu.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="side-bar">
+
+        <div class="side-bar-tab">
+            <div class="logo-container"> <a href="./index.html"> <img class="logo-img" src="../images/main/logo.png"
+                        alt="logo"></a>
+            </div>
+        </div>
+
+
+        <div class="side-bar-tab">
+            <div class="img-container">
+                <a href="./memory.html"><img class="memory-logo-img" src="../images/memory/tab-logo.png" alt="logo"></a>
+            </div>
+        </div>
+
+        <div class="side-bar-tab">
+            <div class="img-container">
+                <a href="./mastermind.html"><img class="mastermind-logo-img" src="../images/mastermind/tab-logo.png"
+                        alt="logo"></a>
+            </div>
+        </div>
+
+        <div class="side-bar-tab current-tab">
+            <div class="img-container">
+                <a href=""> <img class="pendu-logo-img" src="../images/pendu/tab-logo.png" alt="logo"></a>
+            </div>
+        </div>
+
+    </section>
+
+    <header>
+        <div class="header-container">
+            <img class="header-img" src="../images/pendu/tab-logo.png" alt="logo-pendu">
+            <h1>
+                THE HANGMAN
+            </h1>
+        </div>
+    </header>
+
+    <main id="main-display">
+        <section class="game-instructions-section" id="game-instruction-section">
+            <h2>THE HANGMAN GAME</h2>
+            <h3>Rules:</h3>
+            <p>The goal is simple: guess the hidden word! </p>
+            <p>To do this, you'll need to figure out which letters are in the
+                word.</p>
+            <p>Each wrong guess adds a part to the stick figure—head, body, arms, and legs. But with every correct
+                guess, you reveal the letters in the word.</p>
+            <p>The challenge? Guess the word before the stick figure is fully drawn, and you win!</p>
+            <div class="button-div">
+                <button class="btn play-button" id="play-button"><img class="button-image"
+                        src="../images/main/start.png" alt=""></button>
+                <button class="btn retry-button" id="retry-button" disabled><img class="button-image"
+                        src="../images/pendu/retry.png" alt=""></button>
+            </div>
+        </section>
+        <section class="game-section" id="game-section"></section>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+:root {
+    --holtwood: "Holtwood One SC", serif;
+    --lexend: "Lexend", serif;
+
+    --sidebar-header-size: 6rem;
+
+    --dark-blue: #1D313C;
+    --dark-blue-highlight: #304d5a;
+    --light-dark-blue: #103747;
+    --middle-blue: #419099;
+    --light-blue: #91cbcf;
+    --deep-blue: #272c44;
+    --deep-blue-highlight: #444f89;
+    --light-deep-blue: #5970b7;
+
+    --yellow: #d5a021;
+    --yellow-highlight: #E2B547;
+    --yellow-middle: #e1b42e;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2rem;
+}
+
+#main-display {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+
+    width: auto;
+    padding: 1rem;
+    gap: 2.5rem;
+    margin-left: var(--sidebar-header-size);
+    margin-right: var(--sidebar-header-size);
+}
+
+.game-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    gap: 2rem;
+    padding: 2rem;
+
+    background-color: var(--dark-blue);
+    border: 3px solid var(--light-blue);
+    border-radius: 10px;
+
+    color: white;
+    font-family: var(--lexend);
+    user-select: none;
+
+    .play-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 64px;
+        width: 64px;
+
+        border: 3px solid black;
+        border-radius: 10px;
+
+        background-color: var(--yellow);
+
+        &:hover {
+            background-color: var(--yellow-highlight);
+        }
+    }
+
+    .rules-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0.2rem;
+
+        background-color: var(--dark-blue);
+        border: none;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: var(--dark-blue-highlight);
+        }
+
+        img {
+            height: 64px;
+            width: 64px;
+        }
+    }
+
+    .difficulty-selector-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 1rem;
+
+        font-weight: bold;
+        font-size: 1.5rem;
+
+        .difficulty-selector {
+            padding: 0.2rem;
+
+            background-color: var(--dark-blue-highlight);
+            border: 3px solid black;
+            border-radius: 5px;
+
+            color: white;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.card {
+    height: fit-content;
+    width: fit-content;
+    border: 5px solid var(--light-blue);
+
+
+    img {
+        height: 17rem;
+        width: 17rem;
+    }
+
+    .card-hidden-image {
+        display: flex;
+
+        padding: 1.5rem;
+
+        background-color: var(--dark-blue);
+
+        &:hover {
+            background-color: var(--light-dark-blue);
+        }
+    }
+
+    .card-image {
+        display: flex;
+        padding: 1.5rem;
+    }
+
+    .hidden {
+        display: none;
+    }
+}
+
+.winning-message-p {
+    display: flex;
+    align-self: center;
+    color: white;
+    font-size: 4rem;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+
+    .rules-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 90%;
+        max-width: 500px;
+        padding: 20px;
+        gap: 1rem;
+
+        background-color: var(--dark-blue-highlight);
+        border: 2px solid var(--light-blue);
+        border-radius: 8px;
+
+        color: white;
+        font-family: var(--lexend);
+        font-size: 1.15rem;
+        line-height: 1.5rem;
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-family: var(--holtwood);
+        }
+
+        .important-rule {
+            width: 100%;
+            font-weight: bold;
+        }
+    }
+
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        background: none;
+        border: none;
+
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .close-button:hover {
+        color: var(--yellow);
+    }
+}

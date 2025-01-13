@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/memory.css">
+
+    <script src="../js/memory/memory.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="side-bar">
+
+        <div class="side-bar-tab">
+            <div class="logo-container"> <a href="./index.html"> <img class="logo-img" src="../images/main/logo.png"
+                        alt="logo"></a>
+            </div>
+        </div>
+
+        <div class="side-bar-tab current-tab">
+            <div class="img-container">
+                <a href=""><img class="memory-logo-img" src="../images/memory/tab-logo.png" alt="logo"></a>
+            </div>
+        </div>
+
+
+        <div class="side-bar-tab">
+            <div class="img-container">
+                <a href="./mastermind.html"><img class="mastermind-logo-img" src="../images/mastermind/tab-logo.png"
+                        alt="logo"></a>
+            </div>
+        </div>
+
+        <div class="side-bar-tab">
+            <div class="img-container">
+                <a href="./pendu.html"> <img class="pendu-logo-img" src="../images/pendu/tab-logo.png" alt="logo"></a>
+            </div>
+        </div>
+
+    </section>
+
+    <header>
+        <div class="header-container">
+            <img class="header-img" src="../images/memory/tab-logo.png" alt="logo-memory">
+            <h1>
+                POKEMON MEMORY
+            </h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="game-header">
+            <div class="difficulty-selector-div">
+                <label class="difficulty-selector-label" for="difficulty-selector">Difficulty: </label>
+                <select class="difficulty-selector" name="difficulty-selector" id="difficulty-selector">
+                    <option value="10">Easy</option>
+                    <option value="20">Medium</option>
+                    <option value="30">Hard</option>
+                </select>
+            </div>
+            <button class="play-button"><img draggable="false" src="../images/main/start.png" alt="play"></button>
+            <button class="rules-button"><img draggable="false" src="../images/main/rules.png" alt="rules"></button>
+        </div>
+
+        <div class="lightbox" id="rulesLightbox">
+            <div class="rules-card" onclick="event.stopPropagation()">
+                <button class="close-button">&times;</button>
+                <h2>Game Rules</h2>
+                <p>This memory game challenges you to match pairs of Pokémon hidden on cards.</p>
+                <p>All cards are laid face down, and on each turn, you flip two cards to reveal the Pokémon.
+                    If the cards match, they remain face up; if not, they are turned back over.</p>
+                <p>The goal is to remember the locations of the Pokémon and match all pairs with as few attempts as
+                    possible.</p>
+                <p>Test your memory and see how quickly you can find every pair!</p>
+                <div class="important-rule">
+                    <p>There are three difficulty modes:</p>
+                    <ul>
+                        <li>Easy: 10 cards</li>
+                        <li>Medium: 20 cards</li>
+                        <li>Hard: 30 cards</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="main-display"></div>
+    </main>
+</body>
+
+</html>

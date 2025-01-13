@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --holtwood: "Holtwood One SC", serif;
+    --lexend: "Lexend", serif;
+
+    --sidebar-header-size: 6rem;
+
+    --dark-blue: #1D313C;
+    --dark-blue-highlight: #304d5a;
+    --light-dark-blue: #103747;
+    --middle-blue: #419099;
+    --light-blue: #91cbcf;
+    --deep-blue: #272c44;
+    --deep-blue-highlight: #444f89;
+    --light-deep-blue: #5970b7;
+    --yellow: #d5a021;
+
+}
+
+body {
+    background-color: var(--dark-blue-highlight);
+}
+
+h1 {
+    color: white;
+    font-family: var(--holtwood);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: var(--sidebar-header-size);
+    padding: 2rem;
+
+    background-color: var(--dark-blue);
+    margin-bottom: 1rem;
+
+    user-select: none;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    .header-img {
+        height: 4rem;
+    }
+}
+
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+
+    height: 100%;
+    width: var(--sidebar-header-size);
+
+    background-color: var(--dark-blue);
+
+    .side-bar-tab {
+        display: flex;
+
+        height: var(--sidebar-header-size);
+        width: var(--sidebar-header-size);
+        padding: 0.2rem;
+
+        border-right: 2px solid var(--dark-blue);
+
+        object-fit: contain;
+
+        &:nth-child(n+2) {
+            border-top: 1px solid var(--dark-blue-highlight);
+
+            &:hover {
+                background-color: var(--light-dark-blue);
+            }
+        }
+
+        .logo-container {
+            display: flex;
+            border-radius: 50%;
+            padding: 0.5rem;
+
+            img {
+                height: 100%;
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+
+        .img-container {
+            display: flex;
+            border-radius: 50%;
+            padding: 0.6rem;
+
+            img {
+                height: 100%;
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .current-tab {
+        border-right: 2px solid var(--yellow);
+    }
+}

@@ -1,0 +1,88 @@
+:root {
+    --holtwood: "Holtwood One SC", serif;
+    --lexend: "Lexend", serif;
+
+    --sidebar-header-size: 6rem;
+
+    --dark-blue: #1D313C;
+    --dark-blue-highlight: #304d5a;
+    --light-dark-blue: #103747;
+    --middle-blue: #419099;
+    --light-blue: #91cbcf;
+    --deep-blue: #272c44;
+    --deep-blue-highlight: #444f89;
+    --light-deep-blue: #5970b7;
+    --yellow: #d5a021;
+
+}
+
+#main-display {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    width: auto;
+    min-height: 60rem;
+    padding: 1rem;
+    gap: 2rem;
+    margin-left: var(--sidebar-header-size);
+
+    .game-card {
+        display: flex;
+        align-items: center;
+        align-self: center;
+
+        min-width: 60%;
+        width: min-content;
+        height: fit-content;
+        padding: 2rem;
+        gap: 1rem;
+
+        background-color: var(--dark-blue);
+        border: 2px solid var(--light-blue);
+        border-radius: 20px;
+
+        .image-container {
+            display: flex;
+
+            height: 15rem;
+            width: 15rem;
+
+            background-color: var(--dark-blue-highlight);
+            border: 2px solid var(--light-blue);
+            border-radius: 20px;
+
+            a {
+                display: flex;
+
+                img {
+                    padding: 2rem;
+                }
+            }
+
+        }
+
+        .divider-line {
+            height: 15rem;
+            width: 2px;
+            background-color: var(--dark-blue-highlight);
+        }
+
+        .description-container {
+            display: flex;
+            flex-direction: column;
+
+            height: 100%;
+            padding: 1rem;
+
+            color: white;
+            font-family: var(--lexend);
+            line-height: 1.5rem;
+
+            h2 {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
